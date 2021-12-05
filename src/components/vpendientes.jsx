@@ -1,6 +1,6 @@
 import React from "react";
 
-const Permisos = () => {
+const Vpendientes = () => {
     return(
         <div>
             <div className="row text-center"
@@ -8,7 +8,7 @@ const Permisos = () => {
                         opacity:'0.6',}}> 
 
                 <div className="col -sm-12 col-md-2 col-lg-1">
-                    <h4>Permisos</h4>
+                    <h4>Vacaciones pendientes</h4>
                 </div>
 
                 <div className="col-sm-6 col-md-2 d-flex align-items-center">
@@ -16,7 +16,6 @@ const Permisos = () => {
                     <option selected>Buscar por</option>
                     <option value="1">Fecha</option>
                     <option value="2">Solicitud</option>
-                    <option value="3">Estado</option>
                 </select>
                 </div> 
 
@@ -26,11 +25,7 @@ const Permisos = () => {
     
                 <div className="col-sm-6 col-md-2 col-lg-2 d-flex align-items-center">
                     <button type="button" className="btn btn-light btn-sm" >Buscar</button>
-                </div>
-
-                <div className="col-sm-6 col-md-2 col-lg-2 d-flex align-items-center">
-                    <button type="button" className="btn btn-light btn-sm" >Pendientes</button>
-                </div>      
+                </div>     
             </div>
         
             <div className="row mt-3 justify-content-center">
@@ -41,7 +36,7 @@ const Permisos = () => {
                         <th scope="col">#</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Tipo de Solicitud</th>
-                        <th scope="col">Estado</th>
+                        <th scope="col">Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,27 +44,35 @@ const Permisos = () => {
                         <th scope="row">1</th>
                         <td>01/12/2021</td>
                         <td>Salida</td>
-                        <td>Pendiente</td>
+                        <td>
+                            <button type="button" className="btn btn-light btn btn-outline-danger"><i class="fas fa-times-circle"></i> </button>
+                            <button type="button" className="btn btn-light btn btn-outline-success"><i class="fas fa-check-circle"></i></button>
+                        </td>
                         </tr>
                         <tr>
                         <th scope="row">2</th>
                         <td>02/12/2021</td>
                         <td>Salida</td>
-                        <td>Rechazada</td>
+                        <td>
+                            <button type="button" className="btn btn-light btn btn-outline-danger"><i class="fas fa-times-circle"></i> </button>
+                            <button type="button" className="btn btn-light btn btn-outline-success"><i class="fas fa-check-circle"></i></button>
+                        </td>
                         </tr>
                         <tr>
                         <th scope="row">3</th>
                         <td>03/12/2021</td>
                         <td>Salida</td>
-                        <td>Aprobada</td>
+                        <td>
+                            <button type="button" className="btn btn-light btn btn-outline-danger"><i class="fas fa-times-circle"></i> </button>
+                            <button type="button" className="btn btn-light btn btn-outline-success"><i class="fas fa-check-circle"></i></button>
+                        </td>
                         </tr>
                     </tbody>
                     </table> 
                 </div>
             </div>
         </div>
-        
     )
 }
 
-export default Permisos;
+export default Vpendientes;

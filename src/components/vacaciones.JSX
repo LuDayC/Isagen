@@ -19,13 +19,17 @@ const Vacations = () => {
               </select>
             </div> 
 
-            <div className="col-sm-6 col-md-4 col-lg-5 d-flex align-items-center justify-content-center">
+            <div className="col-sm-6 col-md-4 col-lg-4 d-flex align-items-center justify-content-center">
                 <input className="form-control form-control-sm" id="bus" type="text" placeholder="Buscar..." aria-label=".form-control-sm example"/>    
             </div>
   
-            <div className="col-sm-6 col-md-2 col-lg-3 d-flex align-items-center justify-content-center">
+            <div className="col-sm-6 col-md-2 col-lg-2 d-flex align-items-center justify-content-center">
                 <button type="button" className="btn btn-light btn-sm" >Buscar</button>
-            </div>     
+            </div>
+
+            <div className="col-sm-6 col-md-2 col-lg-2 d-flex align-items-center">
+                <button type="button" className="btn btn-light btn-sm" >Pendientes</button>
+            </div>       
         </div>
         
         <div className="row mt-3 justify-content-center">
