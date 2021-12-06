@@ -1,8 +1,13 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import {Link} from "react-router-dom";
 
 const Uactivar = () => {
     return(
         <div>
+            <Dash />
+            <div className="container-fluid">
             <div className="row text-center"
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}>         
@@ -11,14 +16,17 @@ const Uactivar = () => {
                     <h4>¿Está segur@?</h4>
                 </div>
             </div>
+            </div>
             <div class="modal-body">
+            <div className="row d-flex align-items-center justify-content-center">
             ¿Desea Activar este usuario?
             </div>
-            <hr/>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-light btn btn-outline-success" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-light btn btn-outline-danger" data-bs-dismiss="modal">Aceptar</button>
             </div>
+            <div class="modal-footer">
+            <Link to="/usuarios" class="btn btn-light btn btn-outline-danger">Cancelar</Link>
+                <Link to="/usuarios" class="btn btn-light btn btn-outline-success">Aceptar</Link>
+            </div>
+            <Footer /> 
         </div>
 
     )

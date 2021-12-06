@@ -1,17 +1,24 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import Home from "./home";
+import {Link} from "react-router-dom";
 
 const Reporte = () => {
     return(
       <div class="container-fluid">
+          <Dash />
+          <Home />
+          <div class="container-fluid">  
             <div className="row" 
-            style={{backgroundColor: '#7a7373',
-            opacity:'0.2',}}>
+            style={{backgroundColor: '#1698cc',
+            opacity:'0.6',}}>
             <div className="col -sm-6 col-md-6 col-lg-6 text-center">
                 <h4>Reportes por salario</h4>
             </div>
-
-            <div className="col-sm-5 col-md-5 col-lg-5 d-flex align-items-center d-flex justify-content-md-end">
+            <div className="col-sm-3 col-md-3 col-lg-3 d-flex justify-content-md-end">
                 <button type="button" className="btn btn-light border-dark btn-sm" >Descargar reporte</button>
+            </div>
             </div>     
         </div>
         
@@ -92,6 +99,7 @@ const Reporte = () => {
             </table> 
           </div>
         </div>
+        <Footer />
         </div>
         
     )

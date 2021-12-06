@@ -1,8 +1,13 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import {Link} from "react-router-dom";
 
 const Ucrear = () => {
     return(
         <div>
+            <Dash />
+            <div className="container-fluid">
             <div className="row text-center"
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}>         
@@ -10,6 +15,7 @@ const Ucrear = () => {
                 <div className="col -sm-12 col-md-12 col-lg-12 text-center">
                     <h4>Crear usuario</h4>
                 </div>
+            </div>
             </div>
             <div class="row g-3">
                     <div class="col">
@@ -96,9 +102,10 @@ const Ucrear = () => {
                 </div>
             <hr />
             <div class="modal-footer">
-                <button type="button" class="btn btn-light btn btn-outline-danger" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-light btn btn-outline-success" data-bs-dismiss="modal">Actualizar</button>
+                <Link to="/usuarios" class="btn btn-light btn btn-outline-danger">Cancelar</Link>
+                <Link to="/usuarios" class="btn btn-light btn btn-outline-success">Actualizar</Link>
             </div>
+            <Footer />
         </div>
     )
 }

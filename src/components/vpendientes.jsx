@@ -1,8 +1,12 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
 
 const Vpendientes = () => {
     return(
         <div>
+            <Dash />
+            <div class="container-fluid">
             <div className="row text-center"
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}> 
@@ -27,7 +31,7 @@ const Vpendientes = () => {
                     <button type="button" className="btn btn-light btn-sm" >Buscar</button>
                 </div>     
             </div>
-        
+            </div>
             <div className="row mt-3 justify-content-center">
                 <div className="col -sm-11 col-md-11 col-lg-11">
                     <table className="table table-bordered border-dark table-info">
@@ -71,6 +75,7 @@ const Vpendientes = () => {
                     </table> 
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

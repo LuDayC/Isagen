@@ -1,8 +1,14 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import Home from "./home";
+import {Link} from "react-router-dom";
 
 const Solicitudes = () => {
     return(
         <div>
+            <Dash />
+            <Home />
             <div className="row text-center"
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}>         
@@ -32,9 +38,10 @@ const Solicitudes = () => {
                 </div>
                 <hr />
             <div className="modal-footer">
-                <button type="button" className="btn btn-light btn btn-outline-danger">Cancelar</button>
+                <Link to="/home" class="btn btn-light btn btn-outline-danger">Cancelar</Link>
                 <button type="button" className="btn btn-light btn btn-outline-success">Solicitar</button>
             </div>
+        <Footer />
         </div>
         
     )

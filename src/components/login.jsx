@@ -1,5 +1,5 @@
 import React from "react";
-import inf from './js/loginindex'
+import {Link} from "react-router-dom";
 
 const Login = () => {
     return (
@@ -39,7 +39,7 @@ const Login = () => {
 
                       <div className="row mt-3">
                         <div className="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-center">
-                          <button type="button" className="btn btn-info" onClick="inf()">Ingresar</button>
+                          <Link to="/home" className="btn btn-info">Ingresar</Link>
                         </div>
                       </div>
                 </form>

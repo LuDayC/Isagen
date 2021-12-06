@@ -1,9 +1,14 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
 
 const Permisos = () => {
     return(
         <div>
+            <Dash />
+            <div class="container-fluid">
             <div className="row text-center"
+            
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}> 
 
@@ -19,7 +24,7 @@ const Permisos = () => {
                     <option value="3">Estado</option>
                 </select>
                 </div> 
-
+            
                 <div className="col-sm-6 col-md-4 col-lg-4 d-flex align-items-center">
                     <input className="form-control form-control-sm" id="bus" type="text" placeholder="Buscar..." aria-label=".form-control-sm example"/>    
                 </div>
@@ -32,7 +37,7 @@ const Permisos = () => {
                     <button type="button" className="btn btn-light btn-sm" >Pendientes</button>
                 </div>      
             </div>
-        
+            </div>
             <div className="row mt-3 justify-content-center">
                 <div className="col -sm-11 col-md-11 col-lg-11">
                     <table className="table table-bordered border-dark table-info">
@@ -67,6 +72,7 @@ const Permisos = () => {
                     </table> 
                 </div>
             </div>
+            <Footer />
         </div>
         
     )

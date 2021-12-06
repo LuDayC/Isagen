@@ -1,8 +1,14 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import {Link} from "react-router-dom";
 
 const Gnomina = () => {
     return(
-        <div className="row text-center"
+        <div class="container-fluid">
+          <Dash />
+            <div class="container-fluid">
+            <div className="row text-center"
                 style={{backgroundColor: '#1698cc',
                         opacity:'0.6',}}>
             <div className="col -sm-12 col-md-12 col-lg-12 text-center">
@@ -28,10 +34,13 @@ const Gnomina = () => {
             </div>
             <div className="row">
             <div className="modal-footer">
-                <button type="button" className="btn btn-light btn btn-outline-danger">Cancelar</button>
+                <Link to="/home" class="btn btn-light btn btn-outline-danger">Cancelar</Link>
                 <button type="button" className="btn btn-light btn btn-outline-success">Generar</button>
             </div> 
             </div>
+            </div>
+        </div>
+        <Footer />
         </div>
             
     )

@@ -4,13 +4,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  NavLink
 } from "react-router-dom";
 import Login from './components/login.jsx'
-import Dash from './components/dashboard'
-import Footer from './components/footer'
-import Home from './components/home'
 import Permisos from './components/permisos'
 import Reporte from './components/reporte';
 import Usuarios from './components/usuarios';
@@ -25,14 +20,15 @@ import Ucrear from './components/ucrear'
 import Gnomina from './components/gnomina'
 import Uactivar from './components/uactivar';
 import Udesactivar from './components/udesactivar';
+import NoMatch from './components/error404';
 
 export default function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>  
+    <div>   
+        <Routes>
           <Route exact path="/" element={<Login />}/>
-          <Route exact path="/home" element={<Home />}/>
+          <Route exact path="/home" element={<Reporte />}/>
           <Route exact path="/home/solicitudes" element={<Solicitudes />}/>
           <Route exact path="/home/certificados" element={<Certificados />}/>
           <Route exact path="/home/nomina" element={<Nomina />}/>
@@ -46,10 +42,10 @@ export default function App() {
           <Route exact path="/usuarios/activar" element={<Uactivar />}/>
           <Route exact path="/usuarios/desactivar" element={<Udesactivar />}/>
           <Route exact path="/nomina" element={<Gnomina />}/>
+          <Route path="*" element={<NoMatch />}/>
         </Routes>
       </div>
     </Router>
   );
 }
-
 

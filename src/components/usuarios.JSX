@@ -1,11 +1,16 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
+import {Link} from "react-router-dom";
 
 const Usuarios = () => {
     return(
         <div className="container-fluid">
+          <Dash />
+          <div className="container-fluid">
             <div className="row" 
-            style={{backgroundColor: '#7a7373',
-                    opacity:'0.2',}}>
+            style={{backgroundColor: '#1698cc',
+            opacity:'0.6',}}>
             <div className="col -sm-12 col-md-2 col-lg-2 d-flex align-items-center justify-content-center">
                 <h4>Usuarios</h4>
             </div>
@@ -28,10 +33,10 @@ const Usuarios = () => {
             </div>
             
             <div className="col-sm-6 col-md-2 col-lg-2 d-flex align-items-center justify-content-center">
-                <button type="button" className="btn btn-light btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#ucreate">Crear usuario</button>
+              <Link to="/usuarios/crear" className="btn btn-light btn btn-outline-dark btn-sm">Crear usuario</Link>
             </div>
         </div>
-        
+        </div>
         <div className="row mt-3">
           <div className="col -sm-11 col-md-12 col-lg-12">
             <table className="table table-bordered border-dark table-info">
@@ -59,7 +64,8 @@ const Usuarios = () => {
                   <td>pepitoperez123</td>
                   <td>01/11/2021</td>
                   <td>Empleado</td>
-                  <td>Activo <button type="button" className="btn btn-light btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#udeactivate"><i class="fas fa-user-check"></i></button></td>
+                  <td>Activo <Link to="/usuarios/activar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-check"></i></button></Link> <Link to="/usuarios/desactivar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-times"></i></button></Link>
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
@@ -70,7 +76,8 @@ const Usuarios = () => {
                   <td>pepitoperez123</td>
                   <td>01/11/2021</td>
                   <td>Empleado</td>
-                  <td>Activo <button type="button" className="btn btn-light btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#udeactivate"><i class="fas fa-user-check"></i></button></td>
+                  <td>Activo <Link to="/usuarios/activar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-check"></i></button></Link> <Link to="/usuarios/desactivar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-times"></i></button></Link>
+                  </td>                
                 </tr>
                 <tr>
                   <th scope="row">3</th>
@@ -81,13 +88,14 @@ const Usuarios = () => {
                   <td>pepitoperez123</td>
                   <td>01/11/2021</td>
                   <td>Empleado</td>
-                  
-                  <td>Activo <button type="button" className="btn btn-light btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#udeactivate"><i class="fas fa-user-check"></i></button></td>
+                  <td>Activo <Link to="/usuarios/activar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-check"></i></button></Link> <Link to="/usuarios/desactivar"><button type="button" className="btn btn-light btn btn-outline-dark"><i class="fas fa-user-times"></i></button></Link>
+                  </td>
                 </tr>
               </tbody>
             </table> 
           </div>
         </div>
+        <Footer />
         </div>
     )
 }

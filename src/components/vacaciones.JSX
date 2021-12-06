@@ -1,11 +1,16 @@
 import React from "react";
+import Dash from "./dashboard";
+import Footer from "./footer";
 
 const Vacations = () => {
     return(
+
+        <div className="container-fluid">
+          <Dash />
         <div className="container-fluid">
         <div className="row text-center"
-                style={{backgroundColor: '#7a7373',
-                opacity:'0.2',}}>
+                style={{backgroundColor: '#1698cc',
+                opacity:'0.6',}}> 
             <div className="col -sm-12 col-md-2 col-lg-2 d-flex align-items-center justify-content-center">
                 <h4>Vacaciones</h4>
             </div>
@@ -31,7 +36,7 @@ const Vacations = () => {
                 <button type="button" className="btn btn-light btn-sm" >Pendientes</button>
             </div>       
         </div>
-        
+        </div>
         <div className="row mt-3 justify-content-center">
           <div className="col -sm-11 col-md-11 col-lg-11">
             <table className="table table-bordered border-dark table-info">
@@ -66,6 +71,7 @@ const Vacations = () => {
             </table> 
           </div>
         </div>
+        <Footer />
         </div>
     )
 }
